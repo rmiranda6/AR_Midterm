@@ -589,7 +589,7 @@ MonoBehaviour:
   dismissButton: {fileID: 1787196228}
   imageTrackedText: {fileID: 1513648325}
   arObjectsToPlace:
-  - {fileID: 3943361539576728579, guid: c243cf690dbe145f9af2799967a0f323, type: 3}
+  - {fileID: 5866418464068730601, guid: 2e7c9a889db15ee469c997c54fab0de0, type: 3}
   - {fileID: 5270764028423919669, guid: b97f45eb8b0dce3448807df5a3865c43, type: 3}
   - {fileID: 3943361539576728579, guid: f7cbb24e2ca1343f581952d6aa0839b6, type: 3}
   scaleFactor: {x: 0.1, y: 0.1, z: 0.1}
