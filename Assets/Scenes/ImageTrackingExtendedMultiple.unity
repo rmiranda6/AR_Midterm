@@ -591,7 +591,7 @@ MonoBehaviour:
   arObjectsToPlace:
   - {fileID: 5866418464068730601, guid: 2e7c9a889db15ee469c997c54fab0de0, type: 3}
   - {fileID: 5270764028423919669, guid: b97f45eb8b0dce3448807df5a3865c43, type: 3}
-  - {fileID: 3943361539576728579, guid: f7cbb24e2ca1343f581952d6aa0839b6, type: 3}
+  - {fileID: 5754577641993499164, guid: c1df4cedb5276bb4ea0efe6a6102de99, type: 3}
   scaleFactor: {x: 0.1, y: 0.1, z: 0.1}
 --- !u!114 &827212988
 MonoBehaviour:
