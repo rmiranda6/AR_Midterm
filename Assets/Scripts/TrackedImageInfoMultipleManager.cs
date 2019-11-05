@@ -18,6 +18,11 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
     [SerializeField]
     private GameObject[] arObjectsToPlace;
 
+    public GameObject arObjectsToPlace1;
+    public GameObject arObjectsToPlace2;
+    public GameObject arObjectsToPlace3;
+
+
     [SerializeField]
     private Vector3 scaleFactor = new Vector3(0.1f,0.1f,0.1f);
 
@@ -29,9 +34,13 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
     {
         dismissButton.onClick.AddListener(Dismiss);
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
-        
+        arObjectsToPlace1 = GetComponent<GameObject>();
+        arObjectsToPlace2 = GetComponent<GameObject>();
+        arObjectsToPlace3 = GetComponent<GameObject>();
+
+
         // setup all game objects in dictionary
-        foreach(GameObject arObject in arObjectsToPlace)
+        foreach (GameObject arObject in arObjectsToPlace)
         {
             GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
             newARObject.name = arObject.name;
@@ -85,17 +94,52 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
         if(arObjectsToPlace != null)
         {
             GameObject goARObject = arObjects[name];
-            goARObject.SetActive(true);
-            goARObject.transform.position = newPosition;
-            goARObject.transform.localScale = scaleFactor;
-            foreach(GameObject go in arObjects.Values)
+            if(imageTrackedText.text == "24th_Street_Road")
             {
-                Debug.Log($"Go in arObjects.Values: {go.name}");
-                if(go.name != name)
+                arObjectsToPlace1.SetActive(true);
+                arObjectsToPlace2.SetActive(false);
+                arObjectsToPlace3.SetActive(false);
+                foreach (GameObject go in arObjects.Values)
                 {
-                    go.SetActive(false);
+                    Debug.Log($"Go in arObjects.Values: {go.name}");
+                    if (go.name != name)
+                    {
+                        go.SetActive(false);
+                    }
                 }
-            } 
+
+            }
+            if (imageTrackedText.text == "Storm_Cellar")
+            {
+                arObjectsToPlace2.SetActive(true);
+                arObjectsToPlace1.SetActive(false);
+                arObjectsToPlace3.SetActive(false);
+                foreach (GameObject go in arObjects.Values)
+                {
+                    Debug.Log($"Go in arObjects.Values: {go.name}");
+                    if (go.name != name)
+                    {
+                        go.SetActive(false);
+                    }
+                }
+
+            }
+            if (imageTrackedText.text == "Evidence_NO2")
+            {
+                arObjectsToPlace3.SetActive(true);
+                arObjectsToPlace1.SetActive(false);
+                arObjectsToPlace2.SetActive(false);
+                foreach (GameObject go in arObjects.Values)
+                {
+                    Debug.Log($"Go in arObjects.Values: {go.name}");
+                    if (go.name != name)
+                    {
+                        go.SetActive(false);
+                    }
+                }
+
+            }
+           
         }
     }
 }

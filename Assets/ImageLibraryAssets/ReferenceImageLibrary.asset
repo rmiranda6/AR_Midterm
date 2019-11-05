@@ -21,7 +21,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 3081731578428157777
       m_GuidHigh: 9279001931618875530
-    m_Size: {x: 0.1, y: 0.06666667}
+    m_Size: {x: 0.15, y: 0.1}
     m_SpecifySize: 1
     m_Name: 24th_Street_Road
     m_Texture: {fileID: 2800000, guid: f9506f51828a2ac48a784e3418a3c580, type: 3}
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 8476971345204124783
       m_GuidHigh: 3911185020408698522
-    m_Size: {x: 0.1, y: 0.07939815}
+    m_Size: {x: 0.12594752, y: 0.1}
     m_SpecifySize: 1
     m_Name: Evidence_NO2
     m_Texture: {fileID: 2800000, guid: 8a0e9c6f408675a49a164ac00d524736, type: 3}
